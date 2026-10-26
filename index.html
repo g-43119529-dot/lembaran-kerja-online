@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lembaran Kerja Matematik Tahun 4: Sudut</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    
+    <!-- HALAMAN LOG MASUK -->
+    <div id="login-card" class="card">
+      <div class="card-header">
+        <h2>📐 LEMBARAN KERJA MATEMATIK TAHUN 4</h2>
+        <p>Tajuk: Ruang (6.1.1 Mengenal & Menamakan Sudut)</p>
+      </div>
+      <div class="card-body">
+        <div class="form-group">
+          <label for="select-kelas">Pilih Kelas:</label>
+          <select id="select-kelas">
+            <option value="">-- Pilih Kelas --</option>
+            <option value="4C">4 Cemerlang (4C)</option>
+            <option value="4I">4 Inovatif (4I)</option>
+            <option value="4J">4 Jujur (4J)</option>
+            <option value="4M">4 Maju (4M)</option>
+            <option value="4P">4 Pintar (4P)</option>
+            <option value="4S">4 Setia (4S)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="select-nama">Pilih Nama Murid:</label>
+          <select id="select-nama" disabled>
+            <option value="">-- Pilih Kelas Terlebih Dahulu --</option>
+          </select>
+        </div>
+
+        <button id="btn-start" class="btn btn-primary" disabled>MULA JAWAB 🚀</button>
+      </div>
+    </div>
+
+    <!-- HALAMAN SOALAN -->
+    <div id="quiz-card" class="card hidden">
+      <div class="quiz-header">
+        <div class="user-info">
+          👤 <span id="display-nama"></span> (<span id="display-kelas"></span>)
+        </div>
+        <div class="timer">
+          ⏱️ Masa: <span id="timer-display">00:00</span>
+        </div>
+      </div>
+
+      <div class="progress-container">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+
+      <div id="question-container" class="question-container">
+        <!-- Soalan akan dijana secara dinamik oleh script.js -->
+      </div>
+
+      <div class="quiz-footer">
+        <button id="btn-prev" class="btn btn-secondary" disabled>⬅️ Sebelumnya</button>
+        <button id="btn-next" class="btn btn-primary">Seterusnya ➡️</button>
+        <button id="btn-submit" class="btn btn-success hidden">HANTAR JAWAPAN 📤</button>
+      </div>
+    </div>
+
+    <!-- HALAMAN KEPUTUSAN -->
+    <div id="result-card" class="card hidden">
+      <div class="result-header">
+        🎉 SYABAS & TAHNIAH!
+      </div>
+      <div class="result-body">
+        <div class="score-circle">
+          <span id="final-score">0</span>
+          <small>/ 100</small>
+        </div>
+        <p class="result-detail">Masa Diambil: <strong id="final-time">00:00</strong></p>
+        <p id="status-message" class="status-message">Menghantar keputusan ke Google Sheet...</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
